@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6873F0B-871B-4B0D-8491-46F61A19D4EB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AttendanceWebApp</RootNamespace>
+    <AssemblyName>AttendanceWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.10.4\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\ImageSave.aspx" />
+    <Content Include="Admin\NonRegisteredStudents.aspx" />
+    <Content Include="Admin\RegisteredStudents.aspx" />
+    <Content Include="Admin\Registration.aspx" />
+    <Content Include="Admin\SavePhoto.aspx" />
+    <Content Include="Admin\SP.asmx" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="images\avatar\128.jpg" />
+    <Content Include="images\avatar\48.jpg" />
+    <Content Include="images\avatar\profile-pic.png" />
+    <Content Include="images\bg\1.jpg" />
+    <Content Include="images\bg\2.jpg" />
+    <Content Include="images\bg\3.jpg" />
+    <Content Include="images\bg\bg.png" />
+    <Content Include="images\bg\login-background.png" />
+    <Content Include="images\blogs\1.jpg" />
+    <Content Include="images\blogs\10.jpg" />
+    <Content Include="images\blogs\11.jpg" />
+    <Content Include="images\blogs\12.jpg" />
+    <Content Include="images\blogs\2.jpg" />
+    <Content Include="images\blogs\3.jpg" />
+    <Content Include="images\blogs\4.jpg" />
+    <Content Include="images\blogs\5.jpg" />
+    <Content Include="images\blogs\6.jpg" />
+    <Content Include="images\blogs\7.jpg" />
+    <Content Include="images\blogs\8.jpg" />
+    <Content Include="images\blogs\9.jpg" />
+    <Content Include="images\blogs\blog_item1.jpg" />
+    <Content Include="images\gallery\1.jpg" />
+    <Content Include="images\gallery\10.jpg" />
+    <Content Include="images\gallery\11.jpg" />
+    <Content Include="images\gallery\12.jpg" />
+    <Content Include="images\gallery\2.jpg" />
+    <Content Include="images\gallery\3.jpg" />
+    <Content Include="images\gallery\4.jpg" />
+    <Content Include="images\gallery\5.jpg" />
+    <Content Include="images\gallery\6.jpg" />
+    <Content Include="images\gallery\7.jpg" />
+    <Content Include="images\gallery\8.jpg" />
+    <Content Include="images\gallery\9.jpg" />
+    <Content Include="images\gallery\blog_item1.jpg" />
+    <Content Include="images\icons\loading.gif" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\logo_grey.jpg" />
+    <Content Include="images\thumbs\arch-1.jpg" />
+    <Content Include="images\thumbs\arch-2.jpg" />
+    <Content Include="images\thumbs\autumn-1.jpg" />
+    <Content Include="images\thumbs\boats-1.jpg" />
+    <Content Include="images\thumbs\book-1.jpg" />
+    <Content Include="images\thumbs\business-1.jpg" />
+    <Content Include="images\thumbs\calendar-1.jpg" />
+    <Content Include="images\thumbs\car-1.jpg" />
+    <Content Include="images\thumbs\christmas-1.jpg" />
+    <Content Include="images\thumbs\christmas-2.jpg" />
+    <Content Include="images\thumbs\christmas-3.jpg" />
+    <Content Include="images\thumbs\city-1.jpg" />
+    <Content Include="images\thumbs\city-2.jpg" />
+    <Content Include="images\thumbs\coffee-grass.jpg" />
+    <Content Include="images\thumbs\coins.jpg" />
+    <Content Include="images\thumbs\crayons.jpg" />
+    <Content Include="images\thumbs\cupcakes.jpg" />
+    <Content Include="images\thumbs\eggs-nest.jpg" />
+    <Content Include="images\thumbs\flower-1.jpg" />
+    <Content Include="images\thumbs\flower-2.jpg" />
+    <Content Include="images\thumbs\flower-3.jpg" />
+    <Content Include="images\thumbs\fountain.jpg" />
+    <Content Include="images\thumbs\leaves.jpg" />
+    <Content Include="images\thumbs\lichterman.jpg" />
+    <Content Include="images\thumbs\pinecone.jpg" />
+    <Content Include="images\thumbs\river-1.jpg" />
+    <Content Include="images\thumbs\river-2.jpg" />
+    <Content Include="images\thumbs\sunset-1.jpg" />
+    <Content Include="images\thumbs\tree.jpg" />
+    <Content Include="images\thumbs\winter-1.jpg" />
+    <Content Include="images\thumbs\winter-2.jpg" />
+    <Content Include="images\thumbs\winter-sun.jpg" />
+    <Content Include="images\thumbs\woodstump.jpg" />
+    <Content Include="images\varsoha_logo.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="script\animation.js" />
+    <Content Include="script\bootstrap-hover-dropdown.js" />
+    <Content Include="script\bootstrap.min.js" />
+    <Content Include="script\charts-chartjs.js" />
+    <Content Include="script\charts-flotchart.js" />
+    <Content Include="script\charts-highchart-area.js" />
+    <Content Include="script\charts-highchart-column-bar.js" />
+    <Content Include="script\charts-highchart-combinations.js" />
+    <Content Include="script\charts-highchart-dynamic.js" />
+    <Content Include="script\charts-highchart-line.js" />
+    <Content Include="script\charts-highchart-more.js" />
+    <Content Include="script\charts-highchart-pie.js" />
+    <Content Include="script\charts-highchart-scatter-bubble.js" />
+    <Content Include="script\custom.min.js" />
+    <Content Include="script\data.js" />
+    <Content Include="script\drilldown.js" />
+    <Content Include="script\exporting.js" />
+    <Content Include="script\funnel.js" />
+    <Content Include="script\highchart.js" />
+    <Content Include="script\highcharts-more.js" />
+    <Content Include="script\highcharts.js" />
+    <Content Include="script\holder.js" />
+    <Content Include="script\html5shiv.js" />
+    <Content Include="script\icheck.min.js" />
+    <Content Include="script\index.js" />
+    <Content Include="script\jplist.js" />
+    <Content Include="script\jplist.min.js" />
+    <Content Include="script\jquery-1.10.2.min.js" />
+    <Content Include="script\jquery-migrate-1.2.1.min.js" />
+    <Content Include="script\jquery-ui.js" />
+    <Content Include="script\jquery.cookie.js" />
+    <Content Include="script\jquery.flot.categories.js" />
+    <Content Include="script\jquery.flot.fillbetween.js" />
+    <Content Include="script\jquery.flot.js" />
+    <Content Include="script\jquery.flot.pie.js" />
+    <Content Include="script\jquery.flot.resize.js" />
+    <Content Include="script\jquery.flot.spline.js" />
+    <Content Include="script\jquery.flot.stack.js" />
+    <Content Include="script\jquery.flot.tooltip.js" />
+    <Content Include="script\jquery.menu.js" />
+    <Content Include="script\jquery.metisMenu.js" />
+    <Content Include="script\jquery.nestable.js" />
+    <Content Include="script\jquery.news-ticker.js" />
+    <Content Include="script\jquery.slimscroll.js" />
+    <Content Include="script\main.js" />
+    <Content Include="script\modernizr.min.js" />
+    <Content Include="script\pace.min.js" />
+    <Content Include="script\respond.min.js" />
+    <Content Include="script\responsive-tabs.js" />
+    <Content Include="script\ui-nestable-list.js" />
+    <Content Include="script\zabuto_calendar.min.js" />
+    <Content Include="styles\all.css" />
+    <Content Include="styles\animate.css" />
+    <Content Include="styles\bootstrap.min.css" />
+    <Content Include="styles\flat\aero%402x.png" />
+    <Content Include="styles\flat\aero.css" />
+    <Content Include="styles\flat\aero.png" />
+    <Content Include="styles\flat\all.css" />
+    <Content Include="styles\flat\blue%402x.png" />
+    <Content Include="styles\flat\blue.css" />
+    <Content Include="styles\flat\blue.png" />
+    <Content Include="styles\flat\flat%402x.png" />
+    <Content Include="styles\flat\flat.css" />
+    <Content Include="styles\flat\flat.png" />
+    <Content Include="styles\flat\green%402x.png" />
+    <Content Include="styles\flat\green.css" />
+    <Content Include="styles\flat\green.png" />
+    <Content Include="styles\flat\grey%402x.png" />
+    <Content Include="styles\flat\grey.css" />
+    <Content Include="styles\flat\grey.png" />
+    <Content Include="styles\flat\orange%402x.png" />
+    <Content Include="styles\flat\orange.css" />
+    <Content Include="styles\flat\orange.png" />
+    <Content Include="styles\flat\pink%402x.png" />
+    <Content Include="styles\flat\pink.css" />
+    <Content Include="styles\flat\pink.png" />
+    <Content Include="styles\flat\purple%402x.png" />
+    <Content Include="styles\flat\purple.css" />
+    <Content Include="styles\flat\purple.png" />
+    <Content Include="styles\flat\red%402x.png" />
+    <Content Include="styles\flat\red.css" />
+    <Content Include="styles\flat\red.png" />
+    <Content Include="styles\flat\yellow%402x.png" />
+    <Content Include="styles\flat\yellow.css" />
+    <Content Include="styles\flat\yellow.png" />
+    <Content Include="styles\font-awesome.min.css" />
+    <Content Include="styles\font-awesome.min.old.css" />
+    <Content Include="styles\futurico\futurico%402x.png" />
+    <Content Include="styles\futurico\futurico.css" />
+    <Content Include="styles\futurico\futurico.png" />
+    <Content Include="styles\introjs.css" />
+    <Content Include="styles\jplist-custom.css" />
+    <Content Include="styles\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="styles\jquery.news-ticker.css" />
+    <Content Include="styles\line\aero.css" />
+    <Content Include="styles\line\all.css" />
+    <Content Include="styles\line\blue.css" />
+    <Content Include="styles\line\green.css" />
+    <Content Include="styles\line\grey.css" />
+    <Content Include="styles\line\line%402x.png" />
+    <Content Include="styles\line\line.css" />
+    <Content Include="styles\line\line.png" />
+    <Content Include="styles\line\orange.css" />
+    <Content Include="styles\line\pink.css" />
+    <Content Include="styles\line\purple.css" />
+    <Content Include="styles\line\red.css" />
+    <Content Include="styles\line\yellow.css" />
+    <Content Include="styles\main.css" />
+    <Content Include="styles\minimal\aero%402x.png" />
+    <Content Include="styles\minimal\aero.css" />
+    <Content Include="styles\minimal\aero.png" />
+    <Content Include="styles\minimal\all.css" />
+    <Content Include="styles\minimal\blue%402x.png" />
+    <Content Include="styles\minimal\blue.css" />
+    <Content Include="styles\minimal\blue.png" />
+    <Content Include="styles\minimal\green%402x.png" />
+    <Content Include="styles\minimal\green.css" />
+    <Content Include="styles\minimal\green.png" />
+    <Content Include="styles\minimal\grey%402x.png" />
+    <Content Include="styles\minimal\grey.css" />
+    <Content Include="styles\minimal\grey.png" />
+    <Content Include="styles\minimal\minimal%402x.png" />
+    <Content Include="styles\minimal\minimal.css" />
+    <Content Include="styles\minimal\minimal.png" />
+    <Content Include="styles\minimal\orange%402x.png" />
+    <Content Include="styles\minimal\orange.css" />
+    <Content Include="styles\minimal\orange.png" />
+    <Content Include="styles\minimal\pink%402x.png" />
+    <Content Include="styles\minimal\pink.css" />
+    <Content Include="styles\minimal\pink.png" />
+    <Content Include="styles\minimal\purple%402x.png" />
+    <Content Include="styles\minimal\purple.css" />
+    <Content Include="styles\minimal\purple.png" />
+    <Content Include="styles\minimal\red%402x.png" />
+    <Content Include="styles\minimal\red.css" />
+    <Content Include="styles\minimal\red.png" />
+    <Content Include="styles\minimal\yellow%402x.png" />
+    <Content Include="styles\minimal\yellow.css" />
+    <Content Include="styles\minimal\yellow.png" />
+    <Content Include="styles\nestable.css" />
+    <Content Include="styles\pace.css" />
+    <Content Include="styles\polaris\polaris%402x.png" />
+    <Content Include="styles\polaris\polaris.css" />
+    <Content Include="styles\polaris\polaris.png" />
+    <Content Include="styles\square\aero%402x.png" />
+    <Content Include="styles\square\aero.css" />
+    <Content Include="styles\square\aero.png" />
+    <Content Include="styles\square\all.css" />
+    <Content Include="styles\square\blue%402x.png" />
+    <Content Include="styles\square\blue.css" />
+    <Content Include="styles\square\blue.png" />
+    <Content Include="styles\square\green%402x.png" />
+    <Content Include="styles\square\green.css" />
+    <Content Include="styles\square\green.png" />
+    <Content Include="styles\square\grey%402x.png" />
+    <Content Include="styles\square\grey.css" />
+    <Content Include="styles\square\grey.png" />
+    <Content Include="styles\square\orange%402x.png" />
+    <Content Include="styles\square\orange.css" />
+    <Content Include="styles\square\orange.png" />
+    <Content Include="styles\square\pink%402x.png" />
+    <Content Include="styles\square\pink.css" />
+    <Content Include="styles\square\pink.png" />
+    <Content Include="styles\square\purple%402x.png" />
+    <Content Include="styles\square\purple.css" />
+    <Content Include="styles\square\purple.png" />
+    <Content Include="styles\square\red%402x.png" />
+    <Content Include="styles\square\red.css" />
+    <Content Include="styles\square\red.png" />
+    <Content Include="styles\square\square%402x.png" />
+    <Content Include="styles\square\square.css" />
+    <Content Include="styles\square\square.png" />
+    <Content Include="styles\square\yellow%402x.png" />
+    <Content Include="styles\square\yellow.css" />
+    <Content Include="styles\square\yellow.png" />
+    <Content Include="styles\style-responsive.css" />
+    <Content Include="styles\zabuto_calendar.min.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ImageSave.aspx.cs">
+      <DependentUpon>ImageSave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ImageSave.aspx.designer.cs">
+      <DependentUpon>ImageSave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NonRegisteredStudents.aspx.cs">
+      <DependentUpon>NonRegisteredStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NonRegisteredStudents.aspx.designer.cs">
+      <DependentUpon>NonRegisteredStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RegisteredStudents.aspx.cs">
+      <DependentUpon>RegisteredStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RegisteredStudents.aspx.designer.cs">
+      <DependentUpon>RegisteredStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SavePhoto.aspx.cs">
+      <DependentUpon>SavePhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SavePhoto.aspx.designer.cs">
+      <DependentUpon>SavePhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SP.asmx.cs">
+      <DependentUpon>SP.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="App_Code\DBOps.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Home.Master" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="packages.config" />
+    <Content Include="bin\MySql.Data.InstallState" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="Properties\PublishProfiles\LocalPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\MySite.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\RegisteredFaces\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9024</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9024/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
